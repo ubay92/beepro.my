@@ -125,13 +125,17 @@ section{padding-block:72px;border-top:1px solid var(--line)}
 @media (max-width:760px){.about{grid-template-columns:1fr}}
 
 /* services */
-.svc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.svc li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,1fr);gap:12px 32px;padding-block:24px;border-bottom:1px solid var(--line);align-items:baseline}
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.svc li{display:grid;grid-template-rows:auto 1fr;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.svc .pic{aspect-ratio:16/10;max-width:100%;overflow:hidden;background:var(--screen)}
+.svc .pic img{width:100%;height:100%;object-fit:cover}
+.svc .body{display:grid;gap:10px;align-content:start;padding:20px 20px 22px}
 .svc h3{font-size:1.75rem}
-.svc p{color:var(--muted)}
-.tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.svc p{color:var(--muted);font-size:.98rem}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
 .tag{font-size:.8rem;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);white-space:nowrap}
-@media (max-width:760px){.svc li{grid-template-columns:1fr}.tags{justify-content:flex-start}}
+@media (max-width:1000px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.svc{grid-template-columns:1fr;gap:16px}}
 
 /* process */
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));counter-reset:st}
@@ -284,34 +288,52 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 2
       </div>
       <ul class="svc">
         <li>
-          <h3>Video korporat</h3>
-          <p>Video profil syarikat, pengenalan lembaga pengarah, testimoni pelanggan dan video produk.</p>
-          <div class="tags"><span class="tag">Profil syarikat</span><span class="tag">Produk</span><span class="tag">Testimoni</span></div>
+          <div class="pic"><img src="media/vid-lembaga-pengarah.jpg" alt="Contoh kerja video korporat" loading="lazy" style="object-position:center"></div>
+          <div class="body">
+            <h3>Video korporat</h3>
+            <p>Video profil syarikat, pengenalan lembaga pengarah, testimoni pelanggan dan video produk.</p>
+            <div class="tags"><span class="tag">Profil syarikat</span><span class="tag">Produk</span><span class="tag">Testimoni</span></div>
+          </div>
         </li>
         <li>
-          <h3>Graphic motion</h3>
-          <p>Animasi, intro logo, montaj pembukaan majlis dan infografik bergerak untuk promosi dan pembentangan.</p>
-          <div class="tags"><span class="tag">Animasi</span><span class="tag">Logo</span><span class="tag">Infografik</span></div>
+          <div class="pic"><img src="media/vid-montaj-agensi.jpg" alt="Contoh kerja graphic motion" loading="lazy" style="object-position:center"></div>
+          <div class="body">
+            <h3>Graphic motion</h3>
+            <p>Animasi, intro logo, montaj pembukaan majlis dan infografik bergerak untuk promosi dan pembentangan.</p>
+            <div class="tags"><span class="tag">Animasi</span><span class="tag">Logo</span><span class="tag">Infografik</span></div>
+          </div>
         </li>
         <li>
-          <h3>Liputan acara</h3>
-          <p>Annual dinner, majlis perasmian, majlis keagamaan dan program korporat. Termasuk liputan multi kamera, foto sepanjang acara dan video highlight.</p>
-          <div class="tags"><span class="tag">Multi kamera</span><span class="tag">Foto acara</span><span class="tag">Highlight</span></div>
+          <div class="pic"><img src="media/vid-annual-dinner.jpg" alt="Contoh kerja liputan acara" loading="lazy" style="object-position:center"></div>
+          <div class="body">
+            <h3>Liputan acara</h3>
+            <p>Annual dinner, majlis perasmian, majlis keagamaan dan program korporat. Termasuk liputan multi kamera, foto sepanjang acara dan video highlight.</p>
+            <div class="tags"><span class="tag">Multi kamera</span><span class="tag">Foto acara</span><span class="tag">Highlight</span></div>
+          </div>
         </li>
         <li>
-          <h3>Kandungan media sosial</h3>
-          <p>Reels, TikTok dan video promosi aplikasi atau produk untuk kempen dan jenama.</p>
-          <div class="tags"><span class="tag">Reels</span><span class="tag">TikTok</span><span class="tag">Promo</span></div>
+          <div class="pic"><img src="media/vid-utm-alumni.jpg" alt="Contoh kerja kandungan media sosial" loading="lazy" style="object-position:center"></div>
+          <div class="body">
+            <h3>Kandungan media sosial</h3>
+            <p>Reels, TikTok dan video promosi aplikasi atau produk untuk kempen dan jenama.</p>
+            <div class="tags"><span class="tag">Reels</span><span class="tag">TikTok</span><span class="tag">Promo</span></div>
+          </div>
         </li>
         <li>
-          <h3>Perkahwinan</h3>
-          <p>Nikah, sanding, video teaser dan full edit sinematik. Preview disediakan untuk pasangan sebelum video akhir.</p>
-          <div class="tags"><span class="tag">Nikah</span><span class="tag">Sanding</span><span class="tag">Teaser</span></div>
+          <div class="pic"><img src="media/kahwin-persiapan.jpg" alt="Contoh kerja perkahwinan" loading="lazy" style="object-position:15% center"></div>
+          <div class="body">
+            <h3>Perkahwinan</h3>
+            <p>Nikah, sanding, video teaser dan full edit sinematik. Preview disediakan untuk pasangan sebelum video akhir.</p>
+            <div class="tags"><span class="tag">Nikah</span><span class="tag">Sanding</span><span class="tag">Teaser</span></div>
+          </div>
         </li>
         <li>
-          <h3>Foto dan konvokesyen</h3>
-          <p>Headshot korporat, potret, foto produk, dan sesi konvokesyen di studio atau di kampus.</p>
-          <div class="tags"><span class="tag">Headshot</span><span class="tag">Konvokesyen</span><span class="tag">Produk</span></div>
+          <div class="pic"><img src="media/konvo-kumpulan.jpg" alt="Contoh kerja foto dan konvokesyen" loading="lazy" style="object-position:center 35%"></div>
+          <div class="body">
+            <h3>Foto dan konvokesyen</h3>
+            <p>Headshot korporat, potret, foto produk, dan sesi konvokesyen di studio atau di kampus.</p>
+            <div class="tags"><span class="tag">Headshot</span><span class="tag">Konvokesyen</span><span class="tag">Produk</span></div>
+          </div>
         </li>
       </ul>
     </div>
