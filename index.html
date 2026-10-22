@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beeprography Studio | Studio Video & Foto di Johor Bahru</title>
+<meta name="description" content="Beeprography Studio, studio video dan foto di Johor Bahru sejak 2016. Video korporat, graphic motion, liputan acara, video perkahwinan dan foto konvokesyen.">
+<link rel="canonical" href="https://beepro.my/">
+<link rel="icon" href="media/logo-beepro.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://beepro.my/">
+<meta property="og:title" content="Beeprography Studio | Studio Video & Foto Johor Bahru">
+<meta property="og:description" content="Video korporat, graphic motion, liputan acara, perkahwinan dan foto di Johor Bahru sejak 2016.">
+<meta property="og:image" content="https://beepro.my/media/promo-beepro.jpg">
+<meta name="theme-color" content="#0F1A2C">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Beeprography Studio","legalName":"Beepro Enterprise","url":"https://beepro.my/","image":"https://beepro.my/media/promo-beepro.jpg","telephone":"+60182671012","email":"beeprography@gmail.com","description":"Studio video dan foto di Johor Bahru sejak 2016: video korporat, graphic motion, liputan acara, perkahwinan dan foto konvokesyen.","foundingDate":"2016","address":{"@type":"PostalAddress","addressLocality":"Johor Bahru","addressRegion":"Johor","addressCountry":"MY"},"areaServed":["Johor","Malaysia","Singapore"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: promo reel playing inside a camera viewfinder beside the headline, company-profile sections (about with team photos, services, process), artwork as a filterable contact sheet that opens a lightbox */
+:root{
+  --ink:#0F1A2C; --panel:#162540; --line:#2A3C5A; --text:#EEF1F6; --muted:#9DAAC0;
+  --amber:#F2A541; --on-amber:#1A1206; --rec:#FF5252;
+  --screen:#0A1220; --screen-text:#E9EEF6; --plate:#FFFFFF; --scrim:rgba(6,10,18,.92);
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --ink:#F1F4F8; --panel:#FFFFFF; --line:#D3DBE6; --text:#13213A; --muted:#55627A;
+    --amber:#A35C00; --on-amber:#FFFFFF; --rec:#D42B2B; color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --ink:#F1F4F8; --panel:#FFFFFF; --line:#D3DBE6; --text:#13213A; --muted:#55627A;
+  --amber:#A35C00; --on-amber:#FFFFFF; --rec:#D42B2B; color-scheme:light;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+a{color:inherit}
+img,video{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.95;letter-spacing:.005em;text-wrap:balance;margin:0}
+h2{font-size:clamp(2.4rem,5vw,3.6rem);text-transform:uppercase}
+h3{font-size:1.6rem;text-transform:uppercase}
+p{margin:0}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ink);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:block;width:150px;aspect-ratio:900/226;background:var(--text);
+  -webkit-mask:url("media/logo-beepro.png") center/contain no-repeat;mask:url("media/logo-beepro.png") center/contain no-repeat}
+.nav{display:flex;align-items:center;gap:22px;font-weight:500;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-family:var(--body)}
+.btn-main{background:var(--amber);color:var(--on-amber)}
+.btn-main:hover{filter:brightness(1.08)}
+.btn-line{border-color:var(--line);color:var(--text);background:transparent}
+.btn-line:hover{border-color:var(--text)}
+.nav .btn{color:var(--on-amber);padding:9px 16px}
+@media (max-width:760px){.nav a:not(.btn){display:none}.brand{width:128px}}
+
+/* hero */
+.hero{padding-block:56px 72px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(3.2rem,7.2vw,6rem);text-transform:uppercase}
+.hero-copy{display:grid;gap:24px;min-width:0}
+.lede{color:var(--muted);font-size:1.12rem;max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:.92rem;color:var(--muted)}
+.facts strong{color:var(--text);font-weight:600}
+
+.vf{position:relative;aspect-ratio:16/9;max-width:100%;border-radius:10px;overflow:hidden;background:var(--screen);color:var(--screen-text);font-family:var(--mono);font-size:.76rem;letter-spacing:.04em}
+.vf video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vf::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,18,.45),transparent 22%,transparent 75%,rgba(6,10,18,.55));pointer-events:none}
+.vf .c{position:absolute;z-index:1;width:24px;height:24px;border:2px solid var(--screen-text);opacity:.85;pointer-events:none}
+.c.tl{top:14px;left:14px;border-right:0;border-bottom:0}.c.tr{top:14px;right:14px;border-left:0;border-bottom:0}
+.c.bl{bottom:14px;left:14px;border-right:0;border-top:0}.c.br{bottom:14px;right:14px;border-left:0;border-top:0}
+.vf .hud{position:absolute;z-index:1;display:flex;align-items:center;gap:8px;pointer-events:none}
+.hud.tl{top:19px;left:48px}.hud.tr{top:19px;right:48px}.hud.bl{bottom:19px;left:48px}
+.rec-dot{width:9px;height:9px;border-radius:50%;background:var(--rec);animation:blink 1.2s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+.sound{position:absolute;z-index:2;right:14px;bottom:12px;display:flex;align-items:center;gap:8px;padding:7px 14px 7px 10px;border-radius:999px;border:1px solid rgba(233,238,246,.5);background:rgba(6,10,18,.55);color:var(--screen-text);font:600 .82rem var(--body);cursor:pointer}
+.sound:hover{background:rgba(6,10,18,.8)}
+.sound svg{width:16px;height:16px}
+.tc{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion: reduce){.rec-dot{animation:none}}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:32px}.hero{padding-block:32px 56px}}
+@media (max-width:440px){.vf .hud.tr{display:none}.vf .c{width:16px;height:16px}.hud.tl,.hud.bl{left:36px}}
+
+/* sections */
+section{padding-block:72px;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:1fr 1.4fr;gap:24px 48px;align-items:end;margin-bottom:44px}
+.sec-head p{color:var(--muted);max-width:36em}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:1.15fr 1fr;gap:40px 56px;align-items:start}
+.about-text{display:grid;gap:16px;color:var(--muted);font-size:1.05rem;max-width:36em}
+.about-text strong{color:var(--text);font-weight:600}
+.team{display:grid;grid-template-columns:1.25fr 1fr;gap:12px;margin-top:12px}
+.team figure{margin:0;border-radius:8px;overflow:hidden;aspect-ratio:3/2;max-width:100%}
+.team img{width:100%;height:100%;object-fit:cover}
+.about dl{margin:0;display:grid;border-top:1px solid var(--line)}
+.about dl div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:16px;padding-block:16px;border-bottom:1px solid var(--line)}
+.about dt{color:var(--muted);font-size:.9rem}
+.about dd{margin:0;font-weight:600}
+.tools{margin-top:28px}
+.tools p{color:var(--muted);font-size:.9rem;margin-bottom:12px}
+.tools ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.tools li{width:60px;height:60px;border-radius:12px;background:var(--plate);border:1px solid var(--line);display:grid;place-items:center;padding:8px}
+.tools img{max-width:100%;max-height:100%;object-fit:contain}
+@media (max-width:760px){.about{grid-template-columns:1fr}}
+
+/* services */
+.svc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.svc li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,1fr);gap:12px 32px;padding-block:24px;border-bottom:1px solid var(--line);align-items:baseline}
+.svc h3{font-size:1.75rem}
+.svc p{color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.tag{font-size:.8rem;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);white-space:nowrap}
+@media (max-width:760px){.svc li{grid-template-columns:1fr}.tags{justify-content:flex-start}}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));counter-reset:st}
+.steps li{position:relative;padding:26px 24px 0 0;border-top:2px solid var(--line);min-width:0}
+.steps li::before{counter-increment:st;content:counter(st);position:absolute;top:-15px;left:0;width:28px;height:28px;border-radius:50%;background:var(--amber);color:var(--on-amber);font-weight:600;font-size:.85rem;display:grid;place-items:center}
+.steps h3{margin-bottom:8px}
+.steps p{color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
+@media (max-width:520px){.steps{grid-template-columns:1fr;row-gap:32px}}
+
+/* artwork */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{font-family:var(--body);font-size:.92rem;font-weight:500;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.chip:hover{color:var(--text)}
+.chip[aria-pressed="true"]{background:var(--text);color:var(--ink);border-color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+.work{display:grid;gap:10px;align-content:start;min-width:0;padding:0;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.frame{position:relative;aspect-ratio:1/1;max-width:100%;border-radius:8px;overflow:hidden;background:var(--screen)}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transition:transform .4s}
+.work:hover .frame img{transform:scale(1.04)}
+@media (prefers-reduced-motion: reduce){.frame img{transition:none}.work:hover .frame img{transform:none}}
+.badge{position:absolute;top:10px;left:10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;background:rgba(10,18,32,.72);color:var(--screen-text);padding:3px 7px;border-radius:4px}
+.play{position:absolute;left:50%;top:50%;width:52px;height:52px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(10,18,32,.55);border:2px solid rgba(233,238,246,.85);display:grid;place-items:center}
+.play::after{content:"";margin-left:4px;border-left:14px solid var(--screen-text);border-top:9px solid transparent;border-bottom:9px solid transparent}
+.work .cap{display:grid;gap:2px;min-width:0}
+.work .cap b{font-weight:600;line-height:1.3}
+.work .cap span{font-size:.86rem;color:var(--muted);line-height:1.4}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:20;background:var(--scrim);display:grid;place-items:center;
+  padding:max(56px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb-stage{max-width:min(1200px,100%);max-height:100%;display:grid;gap:12px;justify-items:center}
+.lb-stage img,.lb-stage video{max-width:100%;max-height:calc(100vh - 140px);border-radius:6px;background:#000}
+.lb-cap{color:var(--screen-text);font-size:.95rem;text-align:center}
+.lb-close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:50%;border:1px solid rgba(233,238,246,.5);background:rgba(6,10,18,.6);color:var(--screen-text);font-size:1.5rem;line-height:1;cursor:pointer}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+.contact h2{font-size:clamp(2.6rem,6vw,4.4rem)}
+.contact .lede{margin-top:18px}
+.cards{display:grid;gap:12px}
+.line-item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.line-item div{min-width:0}
+.line-item small{display:block;color:var(--muted);font-size:.82rem}
+.line-item strong{font-weight:600;overflow-wrap:anywhere;user-select:all}
+.copy{flex:none;font-family:var(--body);font-size:.85rem;padding:7px 14px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--text);cursor:pointer}
+.copy:hover{border-color:var(--text)}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#utama" aria-label="Beeprography Studio"></a>
+    <nav class="nav" aria-label="Menu utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#servis">Servis</a>
+      <a href="#artwork">Artwork</a>
+      <a href="#hubungi">Hubungi</a>
+      <a class="btn btn-main" href="https://wa.me/60182671012" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="utama">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1>Studio video dan foto di Johor Bahru</h1>
+        <p class="lede">Beeprography Studio menghasilkan video korporat, graphic motion, liputan acara, video perkahwinan dan foto untuk syarikat, agensi dan individu di seluruh Johor.</p>
+        <div class="actions">
+          <a class="btn btn-main" href="https://wa.me/60182671012" target="_blank" rel="noopener">WhatsApp untuk sebut harga</a>
+          <a class="btn btn-line" href="#artwork">Lihat artwork</a>
+        </div>
+        <div class="facts">
+          <span><strong>Sejak 2016</strong> di Johor Bahru</span>
+          <span><strong>10+ tahun</strong> pengalaman</span>
+          <span><strong>20+ klien</strong> korporat, agensi dan NGO</span>
+        </div>
+      </div>
+
+      <div class="vf">
+        <video id="promo" src="media/promo-beepro.mp4" poster="media/promo-beepro.jpg" muted loop playsinline preload="metadata" aria-label="Video promo Beeprography Studio"></video>
+        <span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span>
+        <div class="hud tl"><span class="rec-dot"></span>REC</div>
+        <div class="hud tr">4K 25p</div>
+        <div class="hud bl tc" id="tc">00:00:00:00</div>
+        <button class="sound" type="button" id="promo-sound" data-video="media/promo-beepro.mp4" data-title="Video promo Beeprography Studio">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>
+          Tonton dengan bunyi
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section id="tentang">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Tentang kami</h2>
+      </div>
+      <div class="about">
+        <div>
+          <div class="about-text">
+            <p><strong>Beeprography Studio bermula di Johor Bahru pada 2016.</strong> Kami pasukan produksi yang mengurus keseluruhan kerja: perancangan, penggambaran, suntingan dan graphic motion.</p>
+            <p>Klien berurusan dengan satu pasukan dari mula hingga akhir. Itu memudahkan komunikasi, menjimatkan masa, dan memastikan gaya visual kekal sama dalam setiap video dan gambar.</p>
+            <p>Kami bekerja dengan agensi kerajaan, syarikat korporat, hotel, NGO, usahawan dan pasangan pengantin, di Malaysia dan Singapura.</p>
+          </div>
+          <div class="team">
+            <figure><img src="media/team-2.jpg" alt="Pasukan Beeprography sedang membuat penggambaran di sebuah restoran" loading="lazy"></figure>
+            <figure><img src="media/team-1.jpg" alt="Krew Beeprography berbincang dengan klien di lokasi" loading="lazy"></figure>
+          </div>
+        </div>
+        <div>
+          <dl>
+            <div><dt>Nama berdaftar</dt><dd>Beepro Enterprise</dd></div>
+            <div><dt>Beroperasi sejak</dt><dd>2016</dd></div>
+            <div><dt>Lokasi</dt><dd>Johor Bahru, Johor</dd></div>
+            <div><dt>Klien</dt><dd>20+ korporat, agensi dan NGO</dd></div>
+            <div><dt>Kelengkapan</dt><dd>Kamera sinema Sony FX30 dan A6700, set multi kamera</dd></div>
+            <div><dt>Bahasa</dt><dd>Bahasa Melayu dan English</dd></div>
+          </dl>
+          <div class="tools">
+            <p>Perisian yang kami guna</p>
+            <ul>
+              <li><img src="media/alat-davinci.png" alt="DaVinci Resolve" title="DaVinci Resolve" loading="lazy"></li>
+              <li><img src="media/alat-adobe-cc.png" alt="Adobe Creative Cloud" title="Adobe Creative Cloud" loading="lazy"></li>
+              <li><img src="media/alat-adobe.png" alt="Adobe" title="Adobe" loading="lazy"></li>
+              <li><img src="media/alat-capcut.png" alt="CapCut" title="CapCut" loading="lazy"></li>
+              <li><img src="media/alat-canva.png" alt="Canva" title="Canva" loading="lazy"></li>
+              <li><img src="media/alat-envato.png" alt="Envato" title="Envato" loading="lazy"></li>
+              <li><img src="media/alat-google-one.png" alt="Google One" title="Google One" loading="lazy"></li>
+              <li><img src="media/alat-claude.png" alt="Claude" title="Claude" loading="lazy"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servis">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Servis</h2>
+        <p>Pilih satu servis, atau gabungkan beberapa untuk kempen yang lebih besar. Setiap sebut harga disesuaikan dengan skop dan bajet anda.</p>
+      </div>
+      <ul class="svc">
+        <li>
+          <h3>Video korporat</h3>
+          <p>Video profil syarikat, pengenalan lembaga pengarah, testimoni pelanggan dan video produk.</p>
+          <div class="tags"><span class="tag">Profil syarikat</span><span class="tag">Produk</span><span class="tag">Testimoni</span></div>
+        </li>
+        <li>
+          <h3>Graphic motion</h3>
+          <p>Animasi, intro logo, montaj pembukaan majlis dan infografik bergerak untuk promosi dan pembentangan.</p>
+          <div class="tags"><span class="tag">Animasi</span><span class="tag">Logo</span><span class="tag">Infografik</span></div>
+        </li>
+        <li>
+          <h3>Liputan acara</h3>
+          <p>Annual dinner, majlis perasmian, majlis keagamaan dan program korporat. Termasuk liputan multi kamera, foto sepanjang acara dan video highlight.</p>
+          <div class="tags"><span class="tag">Multi kamera</span><span class="tag">Foto acara</span><span class="tag">Highlight</span></div>
+        </li>
+        <li>
+          <h3>Kandungan media sosial</h3>
+          <p>Reels, TikTok dan video promosi aplikasi atau produk untuk kempen dan jenama.</p>
+          <div class="tags"><span class="tag">Reels</span><span class="tag">TikTok</span><span class="tag">Promo</span></div>
+        </li>
+        <li>
+          <h3>Perkahwinan</h3>
+          <p>Nikah, sanding, video teaser dan full edit sinematik. Preview disediakan untuk pasangan sebelum video akhir.</p>
+          <div class="tags"><span class="tag">Nikah</span><span class="tag">Sanding</span><span class="tag">Teaser</span></div>
+        </li>
+        <li>
+          <h3>Foto dan konvokesyen</h3>
+          <p>Headshot korporat, potret, foto produk, dan sesi konvokesyen di studio atau di kampus.</p>
+          <div class="tags"><span class="tag">Headshot</span><span class="tag">Konvokesyen</span><span class="tag">Produk</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="proses">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Cara kami bekerja</h2>
+        <p>Proses yang sama untuk setiap projek, besar atau kecil, supaya anda tahu apa yang berlaku di setiap peringkat.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Perbincangan</h3><p>Kami dengar matlamat, tarikh, lokasi dan bajet anda, kemudian hantar cadangan dan sebut harga.</p></li>
+        <li><h3>Perancangan</h3><p>Konsep, skrip atau storyboard, dan jadual penggambaran disahkan bersama anda.</p></li>
+        <li><h3>Penggambaran</h3><p>Pasukan kami datang dengan kelengkapan lengkap, di lokasi anda atau di studio.</p></li>
+        <li><h3>Suntingan</h3><p>Draf pertama dihantar untuk semakan. Selepas pembetulan, anda terima fail akhir siap guna.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="artwork">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Artwork</h2>
+        <p>Contoh kerja kami. Tekan mana-mana karya untuk tonton video atau lihat gambar dengan lebih besar.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Tapis artwork">
+        <button class="chip" type="button" id="f-semua" data-filter="semua" aria-pressed="true">Semua</button>
+        <button class="chip" type="button" id="f-korporat" data-filter="korporat" aria-pressed="false">Korporat</button>
+        <button class="chip" type="button" id="f-acara" data-filter="acara" aria-pressed="false">Acara</button>
+        <button class="chip" type="button" id="f-motion" data-filter="motion" aria-pressed="false">Motion</button>
+        <button class="chip" type="button" id="f-kahwin" data-filter="kahwin" aria-pressed="false">Perkahwinan</button>
+        <button class="chip" type="button" id="f-foto" data-filter="foto" aria-pressed="false">Foto</button>
+      </div>
+
+      <div class="grid" id="works">
+        <button class="work" type="button" data-cat="korporat" data-video="media/vid-baitulmal-intro.mp4">
+          <span class="frame"><img src="media/vid-baitulmal-intro.jpg" alt="" loading="lazy"><span class="badge">VIDEO 0:08</span><span class="play"></span></span>
+          <span class="cap"><b>Video korporat Baitulmal Sabah</b><span>Perbadanan Baitulmal Negeri Sabah</span></span>
+        </button>
+        <button class="work" type="button" data-cat="kahwin" data-video="media/vid-perkahwinan.mp4">
+          <span class="frame"><img src="media/vid-perkahwinan.jpg" alt="" loading="lazy"><span class="badge">VIDEO 0:28</span><span class="play"></span></span>
+          <span class="cap"><b>Video perkahwinan sinematik</b><span>Majlis persandingan</span></span>
+        </button>
+        <button class="work" type="button" data-cat="acara" data-img="media/acara-haul-jemaah.jpg">
+          <span class="frame"><img src="media/acara-haul-jemaah.jpg" alt="" loading="lazy"><span class="badge">FOTO</span></span>
+          <span class="cap"><b>Haul Asmaul Husna</b><span>Masjid Sultan Iskandar, Johor Bahru</span></span>
+        </button>
+        <button class="work" type="button" data-cat="motion" data-video="media/vid-utm-alumni.mp4">
+          <span class="frame"><img src="media/vid-utm-alumni.jpg" alt="" loading="lazy"><span class="badge">VIDEO 0:18</span><span class="play"></span></span>
+          <span class="cap"><b>Promo aplikasi UTM Alumni</b><span>Kandungan media sosial</span></span>
+        </button>
+        <button class="work" type="button" data-cat="foto" data-img="media/konvo-kumpulan.jpg">
+          <span class="frame"><img src="media/konvo-kumpulan.jpg" alt="" loading="lazy"><span class="badge">FOTO</span></span>
+          <span class="cap"><b>Konvokesyen UTM</b><span>Sesi foto kumpulan di kampus</span></span>
+        </button>
+        <button class="work" type="button" data-cat="acara" data-video="media/vid-annual-dinner.mp4">
+          <span class="frame"><img src="media/vid-annual-dinner.jpg" alt="" loading="lazy"><span class="badge">VIDEO 0:19</span><span class="play"></span></span>
+          <span class="cap"><b>Majlis makan malam tahunan</b><span>Video highlight acara</span></span>
+        </button>
+        <button class="work" type="button" data-cat="korporat" data-video="media/vid-lembaga-pengarah.mp4">
+          <span class="frame"><img src="media/vid-lembaga-pengarah.jpg" alt="" loading="lazy"><span class="badge">VIDEO 0:08</span><span class="play"></span></span>
+          <span class="cap"><b>Pengenalan Lembaga Pengarah</b><span>Perbadanan Baitulmal Negeri Sabah</span></span>
+        </button>
+        <button class="work" type="button" data-cat="foto" data-img="media/headshot-korporat.jpg">
+          <span class="frame"><img src="media/headshot-korporat.jpg" alt="" loading="lazy"><span class="badge">FOTO</span></span>
+          <span class="cap"><b>Headshot korporat</b><span>Sesi foto di studio</span></span>
+        </button>
+        <button class="work" type="button" data-cat="kahwin" data-img="media/kahwin-persiapan.jpg">
+          <span class="frame"><img src="media/kahwin-persiapan.jpg" alt="" loading="lazy" style="object-position:20% center"><span class="badge">FOTO</span></span>
+          <span class="cap"><b>Persiapan pengantin</b><span>Detail dan suasana sebelum majlis</span></span>
+        </button>
+        <button class="work" type="button" data-cat="motion" data-video="media/vid-montaj-agensi.mp4">
+          <span class="frame"><img src="media/vid-montaj-agensi.jpg" alt="" loading="lazy"><span class="badge">VIDEO 0:14</span><span class="play"></span></span>
+          <span class="cap"><b>Montaj pembukaan majlis</b><span>Graphic motion dengan logo agensi</span></span>
+        </button>
+        <button class="work" type="button" data-cat="foto" data-img="media/konvo-studio.jpg">
+          <span class="frame"><img src="media/konvo-studio.jpg" alt="" loading="lazy"><span class="badge">FOTO</span></span>
+          <span class="cap"><b>Konvokesyen di studio</b><span>Potret keluarga bersama graduan</span></span>
+        </button>
+        <button class="work" type="button" data-cat="acara" data-img="media/acara-haul-vip.jpg">
+          <span class="frame"><img src="media/acara-haul-vip.jpg" alt="" loading="lazy"><span class="badge">FOTO</span></span>
+          <span class="cap"><b>Majlis keagamaan</b><span>Liputan tetamu kehormat</span></span>
+        </button>
+        <button class="work" type="button" data-cat="acara" data-video="media/vid-program-kanak.mp4">
+          <span class="frame"><img src="media/vid-program-kanak.jpg" alt="" loading="lazy"><span class="badge">VIDEO 0:13</span><span class="play"></span></span>
+          <span class="cap"><b>Program kanak-kanak</b><span>Video highlight acara luar</span></span>
+        </button>
+        <button class="work" type="button" data-cat="foto" data-img="media/konvo-taman.jpg">
+          <span class="frame"><img src="media/konvo-taman.jpg" alt="" loading="lazy"><span class="badge">FOTO</span></span>
+          <span class="cap"><b>Konvokesyen di kampus</b><span>Potret santai bersama rakan</span></span>
+        </button>
+        <button class="work" type="button" data-cat="foto" data-img="media/konvo-masjid.jpg">
+          <span class="frame"><img src="media/konvo-masjid.jpg" alt="" loading="lazy"><span class="badge">FOTO</span></span>
+          <span class="cap"><b>Potret graduan</b><span>Sudut rendah dengan seni bina masjid</span></span>
+        </button>
+        <button class="work" type="button" data-cat="foto" data-img="media/konvo-utm.jpg">
+          <span class="frame"><img src="media/konvo-utm.jpg" alt="" loading="lazy"><span class="badge">FOTO</span></span>
+          <span class="cap"><b>Potret konvokesyen</b><span>Universiti Teknologi Malaysia</span></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="hubungi" class="contact">
+    <div class="wrap">
+      <div>
+        <h2>Ada projek untuk kami?</h2>
+        <p class="lede">Ceritakan apa yang anda perlukan, bila dan di mana. Kami akan balas dengan cadangan dan sebut harga.</p>
+      </div>
+      <div class="cards">
+        <div class="line-item">
+          <div><small>WhatsApp</small><strong id="wa">+60 18-267 1012</strong></div>
+          <button class="copy" type="button" data-copy="wa">Salin</button>
+        </div>
+        <div class="line-item">
+          <div><small>Emel</small><strong id="em">beeprography@gmail.com</strong></div>
+          <button class="copy" type="button" data-copy="em">Salin</button>
+        </div>
+        <div class="line-item">
+          <div><small>Lokasi</small><strong>Johor Bahru, Johor</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Beepro Enterprise (Beeprography Studio)</span>
+    <span>Video, foto dan graphic motion di Johor Bahru</span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Paparan karya" hidden>
+  <button class="lb-close" type="button" id="lb-close" aria-label="Tutup">×</button>
+  <div class="lb-stage" id="lb-stage"></div>
+</div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Promo reel: muted autoplay unless reduced motion
+  var promo=document.getElementById('promo');
+  if(promo&&!reduce){promo.autoplay=true;var p=promo.play();if(p&&p.catch)p.catch(function(){});}
+
+  // Timecode follows the promo when playing, otherwise a free-running 25 fps clock
+  var tc=document.getElementById('tc');
+  var pad=function(n){return (n<10?'0':'')+n};
+  var fmt=function(sec){var f=Math.floor(sec*25);return pad(Math.floor(f/90000))+':'+pad(Math.floor(f/1500)%60)+':'+pad(Math.floor(f/25)%60)+':'+pad(f%25)};
+  if(tc&&!reduce){
+    var tick=function(){tc.textContent=fmt(promo&&!promo.paused?promo.currentTime:performance.now()/1000);requestAnimationFrame(tick)};
+    requestAnimationFrame(tick);
+  }
+
+  // Lightbox
+  var lb=document.getElementById('lb'), stage=document.getElementById('lb-stage'), closeBtn=document.getElementById('lb-close'), lastFocus=null;
+  function open(src,isVideo,title){
+    lastFocus=document.activeElement;
+    stage.innerHTML='';
+    var el;
+    if(isVideo){el=document.createElement('video');el.src=src;el.controls=true;el.playsInline=true;el.autoplay=true;}
+    else{el=document.createElement('img');el.src=src;el.alt=title||'';}
+    stage.appendChild(el);
+    if(title){var c=document.createElement('p');c.className='lb-cap';c.textContent=title;stage.appendChild(c);}
+    lb.hidden=false;document.body.style.overflow='hidden';
+    if(promo&&isVideo)promo.pause();
+    closeBtn.focus();
+  }
+  function close(){
+    stage.innerHTML='';lb.hidden=true;document.body.style.overflow='';
+    if(promo&&!reduce){var p=promo.play();if(p&&p.catch)p.catch(function(){});}
+    if(lastFocus)lastFocus.focus();
+  }
+  closeBtn.addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close()});
+  document.querySelectorAll('.work').forEach(function(w){
+    w.addEventListener('click',function(){
+      var title=w.querySelector('.cap b').textContent;
+      if(w.dataset.video)open(w.dataset.video,true,title);else open(w.dataset.img,false,title);
+    });
+  });
+  var snd=document.getElementById('promo-sound');
+  if(snd)snd.addEventListener('click',function(){open(snd.dataset.video,true,snd.dataset.title)});
+
+  // Artwork filter
+  var chips=document.querySelectorAll('.chip'), works=document.querySelectorAll('.work');
+  chips.forEach(function(chip){
+    chip.addEventListener('click',function(){
+      var f=chip.getAttribute('data-filter');
+      chips.forEach(function(c){c.setAttribute('aria-pressed',c===chip?'true':'false')});
+      works.forEach(function(w){w.hidden=!(f==='semua'||w.getAttribute('data-cat')===f)});
+    });
+  });
+
+  // Copy buttons
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var el=document.getElementById(btn.getAttribute('data-copy'));
+      var text=el.textContent.trim();
+      var done=function(){btn.textContent='Disalin';setTimeout(function(){btn.textContent='Salin'},1600)};
+      var fallback=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fallback)}else{fallback()}
+    });
+  });
+})();
+</script>
+</body>
+</html>
