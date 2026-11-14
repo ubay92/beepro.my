@@ -321,8 +321,12 @@ function boot(CFG, AVAIL0){
       return '<button type="button" class="opt row' + (S.addons[a.id] ? ' on' : '') + '" data-a="' + esc(a.id) + '"><span class="dot sq"></span>' +
         '<span class="grow"><b>' + esc(a.name) + '</b></span>' + (hasPrice(a) ? '<span class="price">+' + rm(a.price) + '</span>' : '') + '</button>';
     });
-    if (CFG.freeCvPhoto) items.push('<button type="button" class="opt row' + (S.cv ? ' on' : '') + '" data-a="__cv"><span class="dot sq"></span>' +
-      '<span class="grow"><b>Gambar CV <span class="free">PERCUMA</span></b><small>Gambar formal untuk resume</small></span></button>');
+    if (CFG.freeCvPhoto) {
+      var cvBtn = '<button type="button" class="opt row' + (S.cv ? ' on' : '') + '" data-a="__cv"><span class="dot sq"></span>' +
+        '<span class="grow"><b>Gambar CV <span class="free">PERCUMA</span></b><small>Gambar formal untuk resume</small></span></button>';
+      var at = 0; CFG.addons.forEach(function(a, i){ if (a.id === 'softcopy') at = i + 1; });
+      items.splice(at, 0, cvBtn);
+    }
     $('addons').innerHTML = items.join('');
     Array.prototype.forEach.call($('addons').children, function(b){
       b.onclick = function(){
